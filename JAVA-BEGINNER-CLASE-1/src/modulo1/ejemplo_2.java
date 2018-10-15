@@ -14,7 +14,7 @@ public class ejemplo_2 {
         Scanner sc = new Scanner(System.in);//objeto scanner 
 
         //entrada de datos de usuario tipo double
-        System.out.println(">>> Ingrese el precio del producto: ");
+        System.out.print(">>> Ingrese el precio del producto S/. ");
         Double precio_producto = sc.nextDouble();
 
         //variable booleana(False , verdadero)
@@ -30,11 +30,19 @@ public class ejemplo_2 {
             porcentaje_descuento = 5.0;
             double descuento = (precio_producto * porcentaje_descuento) / 100;
             precioTotal = precio_producto - descuento;
-            System.out.println("*** Total de la compra es: " + String.valueOf(precioTotal));
+            System.out.println("\n===========================================");
+            System.out.println("*** El descuento es: " + String.valueOf(descuento)+" soles.");
+            System.out.println("*** Total de la compra es: " + String.valueOf(precioTotal) + " soles.");
+            System.out.println("*** USTED HA SIDO BENEFICIADO CON EL DESCUENTO ****");
+            System.out.println("===================================================\n");
         } else {
             precioTotal = precio_producto - porcentaje_descuento;
+            System.out.println("\n===========================================");
             System.out.println("*** Su producto obtenido no tiene descuento aplicado, lo sentimos.");
-            System.out.println("*** Total de la compra es: " + String.valueOf(precioTotal));
+            System.out.println("*** Total de la compra es: " + String.valueOf(precioTotal) + " soles.");
+            System.out.println("*** USTED NO HA SIDO BENEFICIADO CON EL DESCUENTO ****");
+            System.out.println("=================================================\n");
         }
+        sc.close();
     }
 }
