@@ -19,7 +19,7 @@ public class ejemplo_I0 {
         int x = 5;
         int y = 10;
         JOptionPane.showMessageDialog(null,(x*y));
-
+        sc.close();
     }
 
 }
